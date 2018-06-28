@@ -31,7 +31,7 @@
               <li class="leaf">
                 <a title="Iniciar sesión">Issues</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
+              <li class="leaf" *ngIf="_authService.isLoading()">
                 <a title="Cerrar sesión" (click)="logout()">Salir</a>
               </li>
             </ul>

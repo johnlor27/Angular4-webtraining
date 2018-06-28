@@ -14,12 +14,12 @@ import  {Project} from '../models/project.models';
 	}
 
 	getAll() : Observable<Array<Project>>{
-	   const url='http://localhost:8089/projects';
+	   const url= 'http://localhost:8089/projects';
 	   const headers = new Headers({'Content-Type': 'application/json'});
-	   const option = new RequestOptions({
+	   const options = new RequestOptions({
 	   	headers: headers
 	   });
-	   return this._http.get(url).map((response)=> {
+	   return this._http.get(url, options).map((response)=> {
 	   	console.log(response);
 	   return response.json();
 	   });

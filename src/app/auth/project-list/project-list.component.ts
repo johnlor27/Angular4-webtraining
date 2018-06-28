@@ -18,6 +18,7 @@ export class ProjectListComponent implements OnInit {
 	 (data: Project[]) => {
 	  	//next()
 	  	this.projects = data;
+	  	this.isLoading = false;
 	  },
 	  err => {
 	  	console.error(err);
